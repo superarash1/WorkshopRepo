@@ -16,7 +16,7 @@ public class chainAuton extends LinearOpMode {
         waitForStart();
 
         while (opModeIsActive()){
-
+            auton.chainMotion();
         }
     }
 }

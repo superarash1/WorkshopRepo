@@ -42,4 +42,9 @@ public class Chain_Auton_Control {
                 break;
         }
     }
+
+    public void Telemetry(){
+        telemetry.addData("State", ChainState);
+        telemetry.addData("Motor position", chainMechanism.chainMotor.getCurrPosDegrees());
+    }
 }
