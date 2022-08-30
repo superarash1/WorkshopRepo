@@ -12,6 +12,8 @@ public class Chain_Auton_Control {
     public Telemetry telemetry;
 
     public enum chainState {
+        CONTINUOUS,
+        TARGET,
         IDLE
     }
 
@@ -29,8 +31,15 @@ public class Chain_Auton_Control {
 
     public void chainMotion(){
         switch (ChainState){
+            case CONTINUOUS:
+
+                break;
+            case TARGET:
+
+                break;
             case IDLE:
 
+                break;
         }
     }
 }
