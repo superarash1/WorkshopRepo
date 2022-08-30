@@ -11,7 +11,6 @@ import org.firstinspires.ftc.robotcore.external.Telemetry;
 public class PIDF_Controller {
 
     public ElapsedTime runtime = new ElapsedTime();
-    public Telemetry telemetry;
 
     public double tolerance;
 
@@ -51,7 +50,7 @@ public class PIDF_Controller {
 
     //TODO: ILQR
 
-    public PIDF_Controller(double kp, Telemetry telemetry){
+    public PIDF_Controller(double kp){
         this.kp = kp;
 
         a = 0;
@@ -59,11 +58,10 @@ public class PIDF_Controller {
         ki = 0;
         kF = 0;
 
-        this.telemetry = telemetry;
         this.error = tolerance + 1;
     }
 
-    public PIDF_Controller(double kp, double kd, Telemetry telemetry){
+    public PIDF_Controller(double kp, double kd){
         this.kp = kp;
         this.kd = kd;
 
@@ -71,11 +69,10 @@ public class PIDF_Controller {
         ki = 0;
         kF = 0;
 
-        this.telemetry = telemetry;
         this.error = tolerance + 1;
     }
 
-    public PIDF_Controller(double kp, double kd, double a, Telemetry telemetry){
+    public PIDF_Controller(double kp, double kd, double a){
         this.kp = kp;
         this.kd = kd;
         this.a = a;
@@ -83,11 +80,10 @@ public class PIDF_Controller {
         ki = 0;
         kF = 0;
 
-        this.telemetry = telemetry;
         this.error = tolerance + 1;
     }
 
-    public PIDF_Controller(double kp, double kd, double a, double ki, Telemetry telemetry){
+    public PIDF_Controller(double kp, double kd, double a, double ki){
         this.kp = kp;
         this.kd = kd;
         this.a = a;
@@ -95,18 +91,16 @@ public class PIDF_Controller {
 
         kF = 0;
 
-        this.telemetry = telemetry;
         this.error = tolerance + 1;
     }
 
-    public PIDF_Controller(double kp, double kd, double a, double ki, double kF, Telemetry telemetry){
+    public PIDF_Controller(double kp, double kd, double a, double ki, double kF){
         this.kp = kp;
         this.kd = kd;
         this.a = a;
         this.ki = ki;
         this.kF = kF;
 
-        this.telemetry = telemetry;
         this.error = tolerance + 1;
     }
 //
